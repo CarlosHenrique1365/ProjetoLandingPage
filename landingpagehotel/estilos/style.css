@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+
+@media (max-width:700px) {
+    header{
+        flex-direction: column;
+    }
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: "Antic Didone", serif;
+}
+
+nav,ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+a:hover{
+    opacity: 1;
+}
+/*HEADER*/
+header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    padding: 20px 50px;
+}
+
+header nav{
+    display: flex;
+}
+
+header li{
+    margin: 0px 15px;
+}
+
+header li:first-child{
+    margin-left: 0px;
+}
+
+header li:last-child{
+    margin-right: 0px;
+}
+
+header li a {
+    color: #191C03;
+}
+
+/*HERO*/
+.hero{
+    background-image: url('../imagens/img003.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero h1{
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+.hero h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero .btn{
+    background-color: #fff;
+    border-radius: 4px;
+    color: #191C03;
+    padding: 20px 50px;
+    text-transform: uppercase;
+}
+
+@media (max-width:700px) {
+    .hero h1{
+        font-size: 2.2rem;
+    }
+    .hero h3{
+        font-size: 1.1rem;
+    }
+}
+
+/*CONHEÇA O HOTEL*/
+
+.conheca-o-hotel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.conheca-o-hotel h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #191C03;
+}
+
+.conheca-o-hotel p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #191C03;
+    text-align: center;
+}
+
+.conheca-o-hotel hr {
+    width: 200px;
+    height: 2px;
+    background-color: #191C03;
+    margin-bottom: 70px;
+}
+
+.conheca-o-hotel .grid{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.conheca-o-hotel .grid li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.conheca-o-hotel .grid li.small{
+    flex-basis: 40%;
+}
+
+.conheca-o-hotel .grid li.large{
+    flex-basis: 60%;
+}
+
+@media (max-width: 700px){
+        .conheca-o-hotel .grid li.small,large{
+            flex-basis: 100%;
+        }
+}
+
+/*CARACTERISTICAS*/
+
+.caracteristicas{
+    background-color: #191C03;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    display: flex;
+    padding: 100px 50px;
+    align-items: center;
+}
+
+.caracteristicas h4{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+.caracteristicas p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #fff;
+    text-align: center;
+}
+
+.caracteristicas hr {
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 70px;
+}
+
+.caracteristicas .grid{
+    width: 100%;
+    display:flex;
+}
+
+.caracteristicas .grid li{
+    padding: 0px 30px;
+    text-align: center;
+}
+
+.caracteristicas .grid li span{
+    color: #C3C63B;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li h4{
+    font-size: 1.5rem;
+    color: #C3C63B;
+    margin-bottom: 30px;
+}
+
+.caracteristicas .grid li p {
+    color: #fff;
+}
+
+@media (max-width: 850px) {
+    .caracteristicas .grid{
+        flex-direction: column;
+    }
+}
+
+/*NEWSLETTER*/
+.newsletter{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    padding: 100px 50px;
+    align-items: center;
+}
+
+.newsletter h4{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #C3C63B;
+}
+
+.newsletter p{
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #C3C63B;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.newsletter hr{
+    width: 200px;
+    height: 3px;
+    margin-bottom: 70px;
+    background-color: #C3C63B;
+}
+
+.newsletter form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter input{
+    height: 35px;
+    border: 2px solid #C3C63B;
+    border-radius: 3px;
+    width: 400px;
+    cursor: pointer;
+}
+
+.newsletter button{
+    background-color: #C3C63B;
+    color: #fff;
+    border: 1px solid #91932d;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+@media (max-width:700px){
+    .newsletter{
+        flex-direction: column;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #191C03;
+    color: #fff;
+    padding: 100px 50px;
+}
+
+footer ul{
+    display: flex;
+    margin-bottom: 25px;
+}
+
+footer ul li{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer ul li :last-child{
+    margin-right: 0px;
+}
+
+footer ul li span{
+    color: #C3C63B;
+    font-size: 2rem;
+}
+
+footer p {
+    color: #C3C63B;
+    text-align: center;
+}
